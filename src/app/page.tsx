@@ -80,7 +80,7 @@ export default function Home() {
               <input type="text" name="invoiceNumber" value={invoice.invoiceNumber} onChange={handleInvoiceChange} />
             </div>
             <div className="form-group">
-              <label>Tax Rate (%)</label>
+              <label>iva</label>
               <input type="number" name="taxRate" value={invoice.taxRate} onChange={handleInvoiceChange} />
             </div>
           </div>
@@ -101,7 +101,7 @@ export default function Home() {
           {items.map(item => (
             <div key={item.id} className="item-row">
               <div className="form-group" style={{ marginBottom: 0 }}>
-                <label>Description</label>
+                <label>Descrizione</label>
                 <input type="text" value={item.description} onChange={(e) => handleItemChange(item.id, 'description', e.target.value)} />
               </div>
               <div className="form-group" style={{ marginBottom: 0 }}>
@@ -109,7 +109,7 @@ export default function Home() {
                 <input type="number" min="1" value={item.quantity} onChange={(e) => handleItemChange(item.id, 'quantity', parseFloat(e.target.value) || 0)} />
               </div>
               <div className="form-group" style={{ marginBottom: 0 }}>
-                <label>Price</label>
+                <label>Prezzo</label>
                 <input type="number" min="0" value={item.price} onChange={(e) => handleItemChange(item.id, 'price', parseFloat(e.target.value) || 0)} />
               </div>
               <button className="btn btn-danger" onClick={() => removeItem(item.id)} title="Remove Item">
@@ -136,7 +136,11 @@ export default function Home() {
                   <span className="brand-gold"> PHONE CENTER</span>
                 </h2>
                 <div className="brand-divider"></div>
-                <p className="brand-address">VIALE BRENTA 8<br/>20139, MILANO</p>
+                <p className="brand-address">
+                  VIALE BRENTA 08, 20139, MILANO.<br/>
+                  PIVA: 12655180961<br/>
+                  Tel: 0264137265
+                </p>
               </div>
               <div className="invoice-meta">
                 <div className="invoice-title">INVOICE</div>
@@ -158,9 +162,9 @@ export default function Home() {
             <table>
               <thead>
                 <tr>
-                  <th>Description</th>
+                  <th>Descrizione</th>
                   <th className="text-right">Qty</th>
-                  <th className="text-right">Price</th>
+                  <th className="text-right">Prezzo</th>
                   <th className="text-right">Amount</th>
                 </tr>
               </thead>
@@ -182,7 +186,7 @@ export default function Home() {
                 <span>€{subtotal.toFixed(2)}</span>
               </div>
               <div className="summary-row">
-                <span>Tax ({invoice.taxRate}%)</span>
+                <span>iva ({invoice.taxRate}%)</span>
                 <span>€{tax.toFixed(2)}</span>
               </div>
               <div className="summary-row total">

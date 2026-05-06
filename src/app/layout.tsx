@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "electrONIK Billing | Modern Invoice System",
+  title: "MOZUMDER PHONE CENTER Billing | Modern Invoice System",
   description: "Generate professional invoices automatically.",
 };
 
