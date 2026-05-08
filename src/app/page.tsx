@@ -284,10 +284,6 @@ export default function Home() {
                     <div className="bill-detail">{invoice.clientEmail}</div>
                   )}
                 </div>
-                <div className="invoice-status-chip">
-                  <span className="status-dot" />
-                  In Attesa
-                </div>
               </div>
 
               {/* Line Items Table */}
@@ -339,6 +335,15 @@ export default function Home() {
                 <div className="invoice-footer-right">
                   <div>Generato da</div>
                   <div className="footer-tagline">MOZUMDER BILLING</div>
+                </div>
+              </div>
+
+              {/* Firma e Timbro — bottom right with space for signature/seal */}
+              <div className="firma-section">
+                <div className="firma-box">
+                  <div className="firma-spacer" />
+                  <div className="firma-line" />
+                  <div className="firma-label">FIRMA E TIMBRO</div>
                 </div>
               </div>
 

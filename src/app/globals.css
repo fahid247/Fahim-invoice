@@ -750,6 +750,41 @@ td:first-child {
   margin-top: 0.25rem;
 }
 
+/* ─── Firma e Timbro ─── */
+.firma-section {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1rem 0 0 0;
+}
+
+.firma-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+}
+
+.firma-spacer {
+  height: 80px;
+  width: 100%;
+}
+
+.firma-line {
+  width: 100%;
+  height: 1.5px;
+  background: #1e293b;
+  margin-bottom: 0.45rem;
+}
+
+.firma-label {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #475569;
+  text-align: center;
+}
+
 /* ─── Print Button Container ─── */
 .print-btn-container {
   margin-top: 1.5rem;
